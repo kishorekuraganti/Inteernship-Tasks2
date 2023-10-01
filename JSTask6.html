@@ -1,98 +1,95 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
-
     <title>JS Task 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
-        body {
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        #container{
+            margin-top: 100px;
         }
-        span{
-            padding:6.5px 5px;
-            background-color: rgb(155, 172, 199);
-            border-radius:2px 0px 0px 2px;
+        
+        #main-content  {
+         margin-bottom: 20px; /* Adjust the margin as needed */
+      box-shadow:10px bottom;
         }
-        h1{
-            font-family:cursive;
+         
+          .main-content {
+            width:410px;
+            border-bottom: 4px solid #e6e6e63a;
+            margin: 10px auto;
+            background-color:#eeeeeecf;
+            border: 2px solid #e6e6e6;
+            padding: 40px 50px;
+            box-shadow:1px solid black;
+          }
+        .btn {
+            width: 100%;
+            background-color: #3897f0;
+            border: 1px solid #3897f0;
+            padding: 5px 12px;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 3px;
+          }
+          h1{
+            font-family: lucida calligraphy; 
         }
-        .inpt{
-            width: 227px;
-            height:35px;
-            border:solid rgb(172, 178, 209) 1px;
-            padding-left: 9px;;
-        }
-
-        .main {
-            background-color: #d9dae6;
-            border-radius: 8px;
-            padding: 20px;
-            width: 300px;
-            text-align: center;
-            box-shadow: 0 7px 10px rgba(54, 47, 47, 0.1);
-            border-radius:0px;
-            border:solid rgb(172, 178, 209) 1px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .btn-login {
-            width: 250px;
-            border-radius: 0px;
-        }
-
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 14px;
-        }
-        a{
-            text-decoration: none;
-        }
-        p{
-            text-align: center;
-            padding-top: 20px;;
-        }
+      
     </style>
 </head>
 <body>
-    <div>
-    <div class="main">
-        <div>
-           <h1>Instagram</h1>
-        </div><br>
-        <form>
-            <div class="form-group">
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
-                  </svg></span></i><input class ="inpt" type="text" id="username" name="username" class="form-control" placeholder="Username" required>
-            </div>
-            <div class="form-group">
-                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
-                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
-                  </svg></span><input class ="inpt" type="password" id="password" name="password" class="form-control" placeholder="Password" required>
-            </div>
-            <button class="btn btn-primary btn-login">Login</button><br><br>
-            <div class="checkbox-group">
-                <label>
-                    <input type="checkbox" name="remember" id="remember"> Remember me
-                </label>
-                <a href="#">Forgot password?</a>
-            </div>
-        </form>
-    </div>
-    <div><p>don't have an account!<a href = "#"> Sign up here.</a></p></div>
-    </div>
+    <div id="container">
+        <div class="main-content">
+          <div class="header">
+            <h1 class="text-center">Instagram</h1>
+          </div>
+          <div class="l-part">
+              <div class="input-group mb-3">
+                  <div class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></div>
+                  <input type="text" class="form-control" placeholder="Username" required>  
+              </div>
+      
+              <div class="input-group mb-3">
+                  <div class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></div>
+                  <input type="password" class="form-control" placeholder="Password" required>  
+              </div>
+            
+              <input type="button" value="Log in" class="btn" id="loginBtn" />
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+              <div><input type="checkbox"/><label>Remember me</label></div>
+              <a href="#" style="text-decoration: none;">Forgot Password?</a>
+          </div>
+          
+        </div>
+        <div class="text-center" style="position: relative;bottom: -10%;">Don't have an account! <a href="#" class="text-decoration-none">Sign up here</a>.</div>
+        
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var usernameInput = document.querySelector('input[type="text"]');
+          var passwordInput = document.querySelector('input[type="password"]');
+          var loginButton = document.getElementById('loginBtn');
+          loginButton.addEventListener("click", function () {
+            var usernameValue = usernameInput.value.trim();
+            var passwordValue = passwordInput.value.trim();
+            if (usernameValue === "") {
+              alert("Please enter a username.");
+              return;
+            }
+            if (passwordValue === "") {
+              alert("Please enter a password.");
+              return;
+            }
+            alert("Login successful!");
+          });
+        });
+      </script>
+
+    
 </body>
 </html>
